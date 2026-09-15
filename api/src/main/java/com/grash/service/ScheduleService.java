@@ -145,14 +145,14 @@ public class ScheduleService {
                         case MONTHLY:
                             scheduleBuilder = CalendarIntervalScheduleBuilder.calendarIntervalSchedule()
                                     .withIntervalInDays(schedule.getFrequency())
-                                    .withMisfireHandlingInstructionDoNothing()
+                                    .withMisfireHandlingInstructionFireAndProceed()
                                     .preserveHourOfDayAcrossDaylightSavings(true);
                             break;
 
                         case YEARLY:
                             scheduleBuilder = CalendarIntervalScheduleBuilder.calendarIntervalSchedule()
                                     .withIntervalInDays(schedule.getFrequency())
-                                    .withMisfireHandlingInstructionDoNothing()
+                                    .withMisfireHandlingInstructionFireAndProceed()
                                     .preserveHourOfDayAcrossDaylightSavings(true);
                             break;
 
